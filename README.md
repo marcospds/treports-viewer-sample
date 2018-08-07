@@ -1,10 +1,13 @@
-# treports-viewer-sample
+# TReportsViewerSample
 Esse projeto demonstra um exemplo de visualização de relatórios do TReports.
 Para a visualização do relatório é necessário ter um **AccessToken** válido para o **RAC** e também algumas informações do relatório que será gerado.
 
 Parâmetros
 ===
 Segue uma breve descrição dos parâmetros que serão utilizados para a geração do relatório.
+![alt text][logo]
+
+[logo]: https://github.com/totvs/treports-viewer-sample/blob/master/images/Parametros.png "Main parameters"
 
 Url do Rac
 ---
