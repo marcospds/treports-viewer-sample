@@ -24,6 +24,7 @@ namespace SampleTReportsViewerCSharpForm
         Dock = DockStyle.Fill
       };
       panel1.Controls.Add(browser);
+      timer1.Start();
     }
 
     private void buttonGerar_Click(object sender, EventArgs e)
@@ -153,5 +154,15 @@ namespace SampleTReportsViewerCSharpForm
       browser.Load(url);
     }
 
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+      // Efetua o refresh token de 5 em 5 minutos.
+      // Esse intervalo pode ser alterado de acordo com a configuração do tempo de expiração do Rac.
+      // Isso evitará expiração do token configurado no browser e consequentemente
+      // impedindo a comunitação da tela de visualização de relátórios com a API do TReports que
+      // está protegida.
+      GetAccessTokenUsingUserCredentials();
+      browser.RequestHandler = new ChromeBrowserRequestHandler(AccessToken);
+    }
   }
 }

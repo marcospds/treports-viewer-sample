@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       this.buttonGerar = new System.Windows.Forms.Button();
       this.panel1 = new System.Windows.Forms.Panel();
       this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
       this.label10 = new System.Windows.Forms.Label();
       this.textBackendPort = new System.Windows.Forms.TextBox();
       this.label11 = new System.Windows.Forms.Label();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.SuspendLayout();
       // 
       // buttonGerar
@@ -263,6 +265,11 @@
       this.label11.TabIndex = 22;
       this.label11.Text = "Porta Back:";
       // 
+      // timer1
+      // 
+      this.timer1.Interval = 300000;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +334,7 @@
     private System.Windows.Forms.Label label10;
     private System.Windows.Forms.TextBox textBackendPort;
     private System.Windows.Forms.Label label11;
+    private System.Windows.Forms.Timer timer1;
   }
 }
 
