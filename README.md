@@ -43,7 +43,7 @@ Senha do usuário informado.
 
 Url TReports
 ---
-Endereço base de onde o TReports está hospedado.
+Endereço base de onde o TReports está hospedado. Se for necessário informar portas específicas para o frontend e o backend deve-se preencher a porta de cada um desses nos parâmetros seguintes e preencher a URL com um "{0}" informando o local onde a porta deve ser automaticamente inserida. Por exemplo, ao utilizar http://localhost:{0}/Treports o {0} informando as portas 7017 e 4999 para o frontend e backend respectivamente o sistema irá utilizar a url http://localhost:7017/Treports para o frontend e http://localhost:4999/Treports para o backend.
 
 Porta Front
 ---

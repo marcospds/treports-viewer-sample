@@ -113,5 +113,10 @@ namespace SampleTReportsViewerCSharpForm
     public void OnResourceRedirect(IWebBrowser browserControl, IBrowser browser, IFrame frame, IRequest request, IResponse response, ref string newUrl)
     {
     }
+
+    public bool OnBeforeBrowse(IWebBrowser chromiumWebBrowser, IBrowser browser, IFrame frame, IRequest request, bool userGesture, bool isRedirect)
+    {
+      return false;
+    }
   }
 }

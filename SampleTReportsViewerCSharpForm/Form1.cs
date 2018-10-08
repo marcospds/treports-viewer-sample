@@ -107,7 +107,7 @@ namespace SampleTReportsViewerCSharpForm
       using (HttpClient httpClient = new HttpClient())
       {
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AccessToken);
-        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, $"{textUrlTReports.Text}:{textBackendPort.Text}/api/trep/v1/reports/{textUid.Text}/execute");
+        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, $"{GetBaseUrl(textBackendPort.Text)}/api/trep/v1/reports/{textUid.Text}/execute");
         request.Content = new StringContent(
           @"{
               ""generateParams"": 
@@ -148,10 +148,15 @@ namespace SampleTReportsViewerCSharpForm
       if (UidRequest == null)
         throw new InvalidOperationException();
 
-      string url = $"{textUrlTReports.Text}:{textFrontendPort.Text}/reportsviewer/external/{UidRequest}";
+      string url = $"{GetBaseUrl(textFrontendPort.Text)}/reportsviewer/external/{UidRequest}";
 
       browser.RequestHandler = new ChromeBrowserRequestHandler(AccessToken);
       browser.Load(url);
+    }
+
+    private object GetBaseUrl(string port)
+    {
+      return textUrlTReports.Text.Contains("{0}") ? string.Format(textUrlTReports.Text, port) : textUrlTReports.Text;
     }
 
     private void timer1_Tick(object sender, EventArgs e)

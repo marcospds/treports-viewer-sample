@@ -220,7 +220,7 @@
       this.textUrlTReports.Name = "textUrlTReports";
       this.textUrlTReports.Size = new System.Drawing.Size(115, 20);
       this.textUrlTReports.TabIndex = 8;
-      this.textUrlTReports.Text = "http://localhost";
+      this.textUrlTReports.Text = "http://localhost:{0}";
       // 
       // label9
       // 
