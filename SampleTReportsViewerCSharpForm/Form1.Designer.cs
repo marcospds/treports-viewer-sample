@@ -186,7 +186,7 @@
       this.textClientId.Name = "textClientId";
       this.textClientId.Size = new System.Drawing.Size(115, 20);
       this.textClientId.TabIndex = 2;
-      this.textClientId.Text = "rac_ro";
+      this.textClientId.Text = "treports_ro";
       // 
       // label7
       // 
